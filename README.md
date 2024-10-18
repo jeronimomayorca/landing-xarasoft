@@ -1,6 +1,6 @@
 # Landing Page for [XaraSoft](https://xarasoft.co/)
 
-![social-preview-image](https://xarasoft.co/images/social-preview.png)
+[![social-preview-image](https://xarasoft.co/images/social-preview.png)]
 
 Landing page made for [XaraSoft](https://xarasoft.co/) built with Astro.
 
@@ -17,8 +17,9 @@ Clone this theme locally and run any of the following commands in your terminal:
 | `npm run build`   | Build your production site to `./dist/`      |
 | `npm run preview` | Preview your build locally, before deploying |
 
-## ❤️ Helping out
+## ❤️ Helping Out
 
-Si encuentras algún error, o tienes una sugerencia, por favor abre un [issue](https://github.com/jeronimomayorca/landing-xarasoft/issues) o [pull request](https://github.com/jeronimomayorca/landing-xarasoft/pulls). ¡Estaré encantado de contribuir contigo!
+If you find some error or want to contribute, you can open an [issue](https://github.com/jeronimomayorca/landing-xarasoft/issues) or a [pull request](https://github.com/jeronimomayorca/landing-xarasoft/pulls).
+¡Estaré encantado de contribuir contigo!
 
 
