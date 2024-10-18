@@ -20,6 +20,8 @@ Clone this theme locally and run any of the following commands in your terminal:
 ## ❤️ Helping Out
 
 If you find some error or want to contribute, you can open an [issue](https://github.com/jeronimomayorca/landing-xarasoft/issues) or a [pull request](https://github.com/jeronimomayorca/landing-xarasoft/pulls).
-¡Estaré encantado de contribuir contigo!
+¡Will be a pleasure to contribute with you 😊!
 
+## 📝 License
 
+Copyright © 2024 [XaraSoft](https://xarasoft.co/).
