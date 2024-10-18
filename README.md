@@ -1,4 +1,4 @@
-# Landing Page for [XaraSoft](https://xarasoft.com/)
+# Landing Page for [XaraSoft](https://xarasoft.co/)
 
 ![social-preview-image](https://xarasoft.co/images/social-preview.png)
 
