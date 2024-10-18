@@ -2,9 +2,9 @@
 
 ![social-preview-image](https://xarasoft.co/images/social-preview.png)
 
-Landing page made for [XaraSoft](https://xarasoft.com/) built with Astro.
+Landing page made for [XaraSoft](https://xarasoft.co/) built with Astro.
 
-🚀 [Live Preview](https://xarasoft.com/)
+🚀 [Live Preview](https://xarasoft.co/)
 
 ## 🚀 Getting started
 
