@@ -1,73 +1,140 @@
 ---
+/** eslint-disable astro/jsx-a11y/label-has-associated-control */
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
 import Feature from '../components/Feature.astro'
 import Counter from '../components/Counter.astro'
 import ContentMedia from '../components/ContentMedia.astro'
+import { Accordion, AccordionItem, Card } from 'accessible-astro-components'
+import ContactForm from '../components/ContactForm.astro'
 ---
 
 <DefaultLayout title="Home">
   <Hero />
   <section class="my-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Tailwind CSS">
-          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
+      <h2 class="mb-16 text-6xl">Nuestros Productos</h2>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <Feature title="Acadsuite.com">
+          Página de información y registro para nuevos clientes
+          <div class="flex justify-end">
+            <button class="rounded bg-[#ffd753]">Leer Más</button>
+          </div>
         </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
-          17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
+        <Feature title="Acadsuite.co">
+          La gestión administrativa
+          <div class="flex justify-end">
+            <button class="rounded bg-[#ffd753]">Leer Más</button>
+          </div>
         </Feature>
-        <Feature icon="mdi:looks" title="Prettier">
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
+        <Feature title="Acadsuite.pro">
+          La herramienta del docente
+          <div class="flex justify-end">
+            <button class="rounded bg-[#ffd753]">Leer Más</button>
+          </div>
         </Feature>
-        <Feature icon="mdi:eslint" title="ESLint">
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
-        </Feature>
-        <Feature icon="mdi:book-open-page-variant" title="Blog">
-          This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
-        </Feature>
-        <Feature icon="mdi:language-markdown" title="Markdown & MDX">
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
-        </Feature>
-        <Feature icon="mdi:theme-light-dark" title="Dark mode">
-          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
-        </Feature>
-        <Feature icon="mdi:cog" title="Design System">
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-        <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
-          Excellent lighthouse scores means your website will load faster and get better SEO rankings.
+        <Feature title="Acadsuite.homes">
+          La comunicacón con el hogar
+          <div class="flex justify-end">
+            <button class="rounded bg-[#ffd753]">Leer Más</button>
+          </div>
         </Feature>
       </div>
     </div>
   </section>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <h2>Accessible Components</h2>
+
+  <div class="container">
+    <h2 class="text-center text-6xl">¡Brindamos soluciones a la medida de tu empresa!</h2>
+  </div>
+  <ContentMedia imgSrc="/codin.jpg">
     <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
-        >separate package</a
-      >. They'll get you up and running in building an accessible solution for your visitors.
+      ¿Tienes dificultades con tu software o necesitas uno? Somos Soluciones en la nube Xarasoft SAS. Posibilitamos la
+      buena gestión y control de los procesos en las organizacionesn mediante el desarrollo de ágiles sistemas de
+      información, incorporando efectivas estrategias al usuario, brindando la mayor seguridad en el manejo de sus
+      datos.
     </p>
   </ContentMedia>
-  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-    <h2>WCAG 2.1 AA Compliant</h2>
+  <ContentMedia imgSrc="/IMG_5902.jpeg" reverseImg={true}>
     <p class="text-2xl">
       Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
       navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
       reaching WCAG AA compliance.
     </p>
   </ContentMedia>
-  <section class="mb-32 mt-64">
-    <div class="container">
-      <h2 class="mb-16 text-6xl">Counters</h2>
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="520" title="Stars" sub="On GitHub" />
-        <Counter count="17" title="Accessible" sub="Components" />
-        <Counter count="500" title="Commits" sub="Merged" />
-        <Counter count="18+" title="Months" sub="Since launch" />
-      </div>
+  <section class="container my-32">
+    <h2 class="my-32 text-center text-6xl">Preguntas Frecuentes</h2>
+    <Accordion>
+      <AccordionItem header="First Item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium
+          debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam
+          est tenetur.
+        </p>
+        <a href="#">Tab to me!</a>
+      </AccordionItem>
+      <AccordionItem header="Second Item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium
+          debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam
+          est tenetur.
+        </p>
+      </AccordionItem>
+      <AccordionItem header="Third Item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium
+          debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam
+          est tenetur.
+        </p>
+      </AccordionItem>
+      <AccordionItem header="Fourth Item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium
+          debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam
+          est tenetur.
+        </p>
+      </AccordionItem>
+      <AccordionItem header="Fifth Item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium
+          debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam
+          est tenetur.
+        </p>
+      </AccordionItem>
+    </Accordion>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <h2 class="my-32 text-center text-6xl">¡Solicita un demo!</h2>
+    <ContactForm />
+
+    <div class="my-32 grid sm:grid-cols-1 md:grid-cols-2">
+      <Card url="/link-to-my-post" img="../../public/interactividad.webp" title="Interactividad" footer="">
+        Dinamice los procesos entre las dependencias de su empresa. Las gestiones administrativas y operativas
+        encuentran con los datos en la nube un vínculo de comunicación de datos de texto, sonido y video dado el entorno
+        multimedia de nuestras soluciones.
+      </Card>
+      <Card url="/link-to-my-post" img="../../public/seguridad.webp" title="Seguridad" footer="">
+        Las aplicaciones son descargables e instalables; el cliente controla y aprueba el número de instalaciones de una
+        aplicación en su plataforma.
+      </Card>
+    </div>
+
+    <div class="my-32 grid gap-8 sm:grid-cols-1 md:grid-cols-3">
+      <Card url="/link-to-my-post" img="../../public/respaldo.webp" title="Respaldo" footer="">
+        Siempre tendrá acceso a su información sin importar las circunstancias, gracias a las copias seguridad que se guardan automáticamente
+      </Card>
+      <Card url="/link-to-my-post" img="../../public/actualizaciones.webp" title="Actualizaciones" footer="">
+        Nos esmeramos en mantener actualizadas nuestras plataformas para brindarle la mayor seguridad frente a las amenazas que hay en la web.
+      </Card>
+      <Card url="/link-to-my-post" img="../../public/economia.webp" title="Economía" footer="">
+        Manejamos productos que se acomodan a todos los presupuestos
+      </Card>
+    </div>
+
+    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+      <Counter count="520" title="Stars" sub="On GitHub" />
+      <Counter count="17" title="Accessible" sub="Components" />
+      <Counter count="500" title="Commits" sub="Merged" />
+      <Counter count="18+" title="Months" sub="Since launch" />
     </div>
   </section>
 </DefaultLayout>

@@ -1,39 +1,33 @@
 ---
 import Navigation from '../components/Navigation.astro'
 import { SkipLinks } from 'accessible-astro-components'
-import { Icon } from 'astro-icon/components'
 ---
 
 <header>
   <SkipLinks />
   <Navigation>
-    <li class="menu-item">
-      <a href="/">Home</a>
+    <li class="menu-item px-3">
+      <a href="/">Inicio</a>
     </li>
-    <li class="menu-item">
-      <a href="/blog/">Blog</a>
+    <li class="menu-item px-3">
+      <a href="/blog/">Nuestros Productos</a>
     </li>
-    <li class="menu-item has-dropdown">
-      <button aria-haspopup="true" aria-expanded="false">Example Pages</button>
+    <li class="menu-item has-dropdown px-3">
+      <button aria-haspopup="true" aria-expanded="false">Ingresa a las plataformas</button>
       <ul class="dropdown-menu">
         <li class="submenu-item">
-          <a href="/mdx-page/">MDX Page</a>
+          <a href="https://acadsuite.co" target="_blank">acadsuite.co</a>
         </li>
         <li class="submenu-item">
-          <a href="/markdown-page/">Markdown Page</a>
+          <a href="https://acadsuite.com" target="_blank">acadsuite.com</a>
         </li>
         <li class="submenu-item">
-          <a href="/accessible-components">Accessible Components</a>
+          <a href="https://acadsuite.pro" target="_blank">acadsuite.pro</a>
+        </li>
+        <li class="submenu-item">
+          <a href="https://acadsuite.homes" target="_blank">acadsuite.homes</a>
         </li>
       </ul>
-    </li>
-    <li class="menu-item">
-      <a href="#" title="external link" rel="external noopener noreferrer">External Link</a>
-    </li>
-    <li class="menu-item type-icon">
-      <a href="https://github.com/markteekman/accessible-astro-starter" title="Go to the GitHub page">
-        <Icon name="ion:logo-github" />
-      </a>
     </li>
   </Navigation>
 </header>

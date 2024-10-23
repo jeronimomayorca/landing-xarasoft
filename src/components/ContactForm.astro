@@ -1,0 +1,94 @@
+<form class="max-w-2xl mx-auto p-4 rounded-lg">
+  <div class="mb-4">
+    <label class="block mb-2 font-bold">Tipo de organización</label>
+    <div>
+      <label class="inline-flex items-center">
+        <input type="radio" name="organizationType" value="educativa" class="form-radio" />
+        <span class="ml-2">Institución Educativa</span>
+      </label>
+    </div>
+    <div>
+      <label class="inline-flex items-center">
+        <input type="radio" name="organizationType" value="salud" class="form-radio" />
+        <span class="ml-2">Institución de Salud</span>
+      </label>
+    </div>
+    <div>
+      <label class="inline-flex items-center">
+        <input type="radio" name="organizationType" value="otro" class="form-radio" />
+        <span class="ml-2">Otro tipo de organización</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <label for="razonSocial" class="block mb-2 font-bold">Razón social</label>
+    <input type="text" id="razonSocial" name="razonSocial" class="w-full px-3 py-2 border rounded-md" />
+  </div>
+
+  <div class="mb-4">
+    <label for="departamento" class="block mb-2 font-bold">Departamento</label>
+    <select id="departamento" name="departamento" class="w-full px-3 py-2 border rounded-md">
+      <option value="">Seleccione...</option>
+      {/* Add department options here */}
+    </select>
+  </div>
+
+  <div class="mb-4">
+    <label for="municipio" class="block mb-2 font-bold">Municipio</label>
+    <select id="municipio" name="municipio" class="w-full px-3 py-2 border rounded-md">
+      <option value="">Seleccione...</option>
+      {/* Add municipality options here */}
+    </select>
+  </div>
+
+  <div class="mb-4">
+    <label for="corregimiento" class="block mb-2 font-bold">Corregimiento</label>
+    <select id="corregimiento" name="corregimiento" class="w-full px-3 py-2 border rounded-md">
+      <option value="">Seleccione...</option>
+      {/* Add township options here */}
+    </select>
+  </div>
+
+  <div class="mb-4">
+    <label for="direccion" class="block mb-2 font-bold">Dirección</label>
+    <div class="flex items-center">
+      <input type="text" id="direccion" name="direccion" class="flex-grow px-3 py-2 border rounded-md" />
+      <label class="inline-flex items-center ml-4">
+        <input type="checkbox" name="ubicacionRural" class="form-checkbox" />
+        <span class="ml-2">Ubicación Rural</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="mb-4 flex space-x-4">
+    <div class="flex-1">
+      <label for="telefonos" class="block mb-2 font-bold">Teléfonos</label>
+      <input type="text" id="telefonos" name="telefonos" class="w-full px-3 py-2 border rounded-md" />
+    </div>
+    <div class="flex-1">
+      <label for="email" class="block mb-2 font-bold">eMail</label>
+      <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-md" />
+    </div>
+  </div>
+
+  <div class="mb-4 flex space-x-4">
+    <div class="flex-1">
+      <label for="representante" class="block mb-2 font-bold">Representante</label>
+      <input type="text" id="representante" name="representante" class="w-full px-3 py-2 border rounded-md" />
+    </div>
+    <div class="flex-1">
+      <label for="tels" class="block mb-2 font-bold">Tels:</label>
+      <input type="text" id="tels" name="tels" class="w-full px-3 py-2 border rounded-md" />
+    </div>
+  </div>
+
+  <p class="mb-4 text-sm text-red-600">
+    * La información será protegida bajo responsabilidad de Soluciones en la nube Xarasoft en su política de tratamiento de datos *
+  </p>
+
+  <div class="flex justify-center space-x-4">
+    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Enviar</button>
+    <button type="button" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400">Retornar</button>
+  </div>
+</form>
