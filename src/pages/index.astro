@@ -11,34 +11,17 @@ import ContactForm from '../components/ContactForm.astro'
 
 <DefaultLayout title="Home">
   <Hero />
-  <section class="my-64">
+  <section class="my-48">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Nuestros Productos</h2>
+      <h2 class="mb-32 text-6xl">Nuestros Productos</h2>
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-        <Feature title="Acadsuite.com">
-          Página de información y registro para nuevos clientes
-          <div class="flex justify-end">
-            <button class="rounded">Leer Más</button>
-          </div>
-        </Feature>
-        <Feature title="Acadsuite.co">
-          La gestión administrativa
-          <div class="flex justify-end">
-            <button class="rounded">Leer Más</button>
-          </div>
-        </Feature>
-        <Feature title="Acadsuite.pro">
-          La herramienta del docente
-          <div class="flex justify-end">
-            <button class="rounded">Leer Más</button>
-          </div>
-        </Feature>
-        <Feature title="Acadsuite.homes">
-          La comunicacón con el hogar
-          <div class="flex justify-end">
-            <button class="rounded">Leer Más</button>
-          </div>
-        </Feature>
+        <Card url="/link-to-my-post" img="../../public/acadsuite.webp" title="Acadsuite" footer="">
+          Una plataforma robusta, donde estudiantes, profesores y administradores pueden gestionar todo lo relacionado con el aprendizaje.
+        </Card>
+
+        <Card url="/link-to-my-post" img="../../public/teecket_master.webp" title="Master Ticket" footer="">
+          Un sistema intuitivo de venta de tiquetes con opciones de rutas, selección de asientos, reservas rápidas y soporte, todo en una interfaz moderna.
+        </Card>
       </div>
     </div>
   </section>
@@ -106,8 +89,8 @@ import ContactForm from '../components/ContactForm.astro'
     <h2 class="my-32 text-center text-6xl">¡Solicita un demo!</h2>
     <ContactForm />
 
-    <div class="my-32 grid sm:grid-cols-1 md:grid-cols-2">
-      <Card url="/link-to-my-post" img="../../public/interactividad.webp" title="Interactividad" footer="">
+    <div class="my-32 grid sm:grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- <Card url="/link-to-my-post" img="../../public/interactividad.webp" title="Interactividad" footer="">
         Dinamice los procesos entre las dependencias de su empresa. Las gestiones administrativas y operativas
         encuentran con los datos en la nube un vínculo de comunicación de datos de texto, sonido y video dado el entorno
         multimedia de nuestras soluciones.
@@ -115,11 +98,21 @@ import ContactForm from '../components/ContactForm.astro'
       <Card url="/link-to-my-post" img="../../public/seguridad.webp" title="Seguridad" footer="">
         Las aplicaciones son descargables e instalables; el cliente controla y aprueba el número de instalaciones de una
         aplicación en su plataforma.
-      </Card>
+      </Card> -->
+      <Feature title="Acadsuite.pro">
+        La herramienta del docente
+        <div class="flex justify-end">
+        </div>
+      </Feature>
+      <Feature title="Acadsuite.pro">
+        La herramienta del docente
+        <div class="flex justify-end">
+        </div>
+      </Feature>
     </div>
 
     <div class="my-32 grid gap-8 sm:grid-cols-1 md:grid-cols-3">
-      <Card url="/link-to-my-post" img="../../public/respaldo.webp" title="Respaldo" footer="">
+      <!-- <Card url="/link-to-my-post" img="../../public/respaldo.webp" title="Respaldo" footer="">
         Siempre tendrá acceso a su información sin importar las circunstancias, gracias a las copias seguridad que se
         guardan automáticamente
       </Card>
@@ -129,7 +122,21 @@ import ContactForm from '../components/ContactForm.astro'
       </Card>
       <Card url="/link-to-my-post" img="../../public/economia.webp" title="Economía" footer="">
         Manejamos productos que se acomodan a todos los presupuestos
-      </Card>
+      </Card> -->
+
+      <Feature title="Acadsuite.pro">
+        La herramienta del docente
+      </Feature>
+      <Feature title="Acadsuite.pro">
+        La herramienta del docente
+        <div class="flex justify-end">
+        </div>
+      </Feature>
+      <Feature title="Acadsuite.pro">
+        La herramienta del docente
+        <div class="flex justify-end">
+        </div>
+      </Feature>
     </div>
 
     <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
