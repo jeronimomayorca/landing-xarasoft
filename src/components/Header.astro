@@ -6,28 +6,11 @@ import { SkipLinks } from 'accessible-astro-components'
 <header>
   <SkipLinks />
   <Navigation>
-    <li class="menu-item px-3">
+    <li class="menu-item px-3 back">
       <a href="/">Inicio</a>
     </li>
     <li class="menu-item px-3">
       <a href="/blog/">Nuestros Productos</a>
-    </li>
-    <li class="menu-item has-dropdown px-3">
-      <button aria-haspopup="true" aria-expanded="false">Ingresa a las plataformas</button>
-      <ul class="dropdown-menu">
-        <li class="submenu-item">
-          <a href="https://acadsuite.co" target="_blank">acadsuite.co</a>
-        </li>
-        <li class="submenu-item">
-          <a href="https://acadsuite.com" target="_blank">acadsuite.com</a>
-        </li>
-        <li class="submenu-item">
-          <a href="https://acadsuite.pro" target="_blank">acadsuite.pro</a>
-        </li>
-        <li class="submenu-item">
-          <a href="https://acadsuite.homes" target="_blank">acadsuite.homes</a>
-        </li>
-      </ul>
     </li>
   </Navigation>
 </header>
@@ -55,5 +38,43 @@ import { SkipLinks } from 'accessible-astro-components'
         }
       }
     }
+
+    background-color: rgba(255, 255, 255, 0); // Fondo completamente transparente
+    position: fixed; // Para que el navbar se mantenga en la parte superior
+    top: 0;
+    width: 100%;
+    z-index: 1; // Asegura que el navbar esté encima del contenido de fondo
+    padding: 1rem; // Ajusta el padding si es necesario
+
+    // Agrega una transición suave si quieres un efecto al hacer hover o scroll
+    transition: background-color 0.3s ease;
+  }
+
+  // Estilos para el navbar transparente
+  .navbar {
+    background-color: rgba(255, 255, 255, 0); // Fondo completamente transparente
+    position: fixed; // Para que el navbar se mantenga en la parte superior
+    top: 0;
+    width: 100%;
+    z-index: 1000; // Asegura que el navbar esté encima del contenido de fondo
+    padding: 1rem; // Ajusta el padding si es necesario
+
+    // Agrega una transición suave si quieres un efecto al hacer hover o scroll
+    transition: background-color 0.3s ease;
+
+    // Ejemplo de estilo para el texto y los enlaces del navbar
+    a {
+      color: #ffffff; // Ajusta el color del texto para que sea visible sobre el fondo
+      text-decoration: none;
+
+      &:hover {
+        color: #ddd; // Color más claro al pasar el cursor
+      }
+    }
+  }
+
+  // Opción para hacer que el fondo se vuelva semitransparente al hacer scroll
+  body.scrolled .navbar {
+    background-color: rgba(255, 255, 255, 0.1); // Fondo con un poco de opacidad al hacer scroll
   }
 </style>

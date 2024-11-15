@@ -1,24 +1,22 @@
 ---
 
-const { src = '/pantalla.jpeg' } = Astro.props
 ---
 
-<section class="hero my-24">
+<section class="hero code-background">
   <div class="container">
-    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
-      <div class="flex flex-col items-center gap-8 md:items-start">
-        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot>¡Bienvenido a <br> <span class="text-gradient">XaraSoft!</span></slot>
+    <div class="items-center">
+      <div class="flex flex-col">
+        <h1 class="text-center text-6xl lg:text-8xl mt-52">
+          <slot>Soluciones en la nube <span class="text-gradient">XaraSoft</span></slot>
         </h1>
       </div>
-      <img class="rounded" src={src} alt="" decoding="async" />
     </div>
   </div>
 </section>
 
 <style lang="scss">
   .text-gradient {
-    background: linear-gradient(315deg, #00cbc1 25%, #ffb232 75%);
+    background: linear-gradient(315deg, #60c5c1 25%, #3e48cc 75%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -29,5 +27,22 @@ const { src = '/pantalla.jpeg' } = Astro.props
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .code-background {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/public/code.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    
   }
 </style>
