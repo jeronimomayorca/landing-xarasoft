@@ -1,73 +1,128 @@
 ---
+/** eslint-disable astro/jsx-a11y/label-has-associated-control */
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
 import Feature from '../components/Feature.astro'
 import Counter from '../components/Counter.astro'
 import ContentMedia from '../components/ContentMedia.astro'
+import { Accordion, AccordionItem, Card } from 'accessible-astro-components'
+import ContactForm from '../components/ContactForm.astro'
 ---
 
 <DefaultLayout title="Home">
   <Hero />
-  <section class="my-64">
+  <section class="my-48">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Tailwind CSS">
-          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
-        </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
-          17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
-        </Feature>
-        <Feature icon="mdi:looks" title="Prettier">
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
-        </Feature>
-        <Feature icon="mdi:eslint" title="ESLint">
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
-        </Feature>
-        <Feature icon="mdi:book-open-page-variant" title="Blog">
-          This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
-        </Feature>
-        <Feature icon="mdi:language-markdown" title="Markdown & MDX">
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
-        </Feature>
-        <Feature icon="mdi:theme-light-dark" title="Dark mode">
-          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
-        </Feature>
-        <Feature icon="mdi:cog" title="Design System">
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-        <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
-          Excellent lighthouse scores means your website will load faster and get better SEO rankings.
-        </Feature>
+      <h2 class="mb-32 text-6xl">Nuestros Productos</h2>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <Card url="/acadsuite" img="../../public/acadsuite.webp" title="Acadsuite" footer="">
+          Una plataforma robusta, donde estudiantes, profesores y administradores pueden gestionar todo lo relacionado con el aprendizaje.
+        </Card>
+
+        <Card url="/masterTicket" img="../../public/teecket_master.webp" title="Master Ticket" footer="">
+          Un sistema intuitivo de venta de tiquetes con opciones de rutas, selección de asientos, reservas rápidas y soporte, todo en una interfaz moderna.
+        </Card>
       </div>
     </div>
   </section>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <h2>Accessible Components</h2>
+
+  <div class="container">
+    <h2 class="text-center text-6xl">¡Brindamos soluciones a la medida de tu empresa!</h2>
+  </div>
+  <ContentMedia imgSrc="/codin.jpg">
     <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
-        >separate package</a
-      >. They'll get you up and running in building an accessible solution for your visitors.
+      ¿Tienes dificultades con tu software o necesitas uno? Somos Soluciones en la nube Xarasoft SAS. Posibilitamos la
+      buena gestión y control de los procesos en las organizacionesn mediante el desarrollo de ágiles sistemas de
+      información, incorporando efectivas estrategias al usuario, brindando la mayor seguridad en el manejo de sus
+      datos.
     </p>
   </ContentMedia>
-  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-    <h2>WCAG 2.1 AA Compliant</h2>
+  <ContentMedia imgSrc="/IMG_5902.jpeg" reverseImg={true}>
     <p class="text-2xl">
       Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
       navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
       reaching WCAG AA compliance.
     </p>
   </ContentMedia>
-  <section class="mb-32 mt-64">
-    <div class="container">
-      <h2 class="mb-16 text-6xl">Counters</h2>
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="520" title="Stars" sub="On GitHub" />
-        <Counter count="17" title="Accessible" sub="Components" />
-        <Counter count="500" title="Commits" sub="Merged" />
-        <Counter count="18+" title="Months" sub="Since launch" />
-      </div>
+  <section class="container my-32">
+    <h2 class="my-32 text-center text-6xl">Preguntas Frecuentes</h2>
+    <Accordion>
+      <AccordionItem header="First Item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium
+          debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam
+          est tenetur.
+        </p>
+      </AccordionItem>
+      <AccordionItem header="Second Item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium
+          debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam
+          est tenetur.
+        </p>
+      </AccordionItem>
+      <AccordionItem header="Third Item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium
+          debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam
+          est tenetur.
+        </p>
+      </AccordionItem>
+      <AccordionItem header="Fourth Item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium
+          debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam
+          est tenetur.
+        </p>
+      </AccordionItem>
+      <AccordionItem header="Fifth Item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium
+          debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam
+          est tenetur.
+        </p>
+      </AccordionItem>
+    </Accordion>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <h2 class="my-32 text-center text-6xl">¡Solicita un demo!</h2>
+    <ContactForm />
+
+    <h2 class="text-center text-6xl mt-28">¿Por qué la nube?</h2>
+    <div class="my-32 grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+      <Feature title="Actualizaciones">
+        Nos esmeramos en mantener actualizadas nuestras plataformas para brindarle la mayor seguridad frente a las amenazas que hay en la web.
+      </Feature>
+      <Feature title="Economía">
+        Manejamos productos que se acomodan a todos los presupuestos
+        <div class="flex justify-end">
+        </div>
+      </Feature>
+      <Feature title="Respaldo">
+        Siempre tendrá acceso a su información sin importar las circunstancias, gracias a las copias seguridad que se guardan automáticamente
+        <div class="flex justify-end">
+        </div>
+      </Feature>
+    </div>
+
+    <div class="my-32 grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+      <Feature title="Interactividad">
+        Dinamice los procesos entre las dependencias de su empresa. Las gestiones administrativas y operativas encuentran con los datos en la nube un vínculo de comunicación de datos de texto, sonido y video dado el entorno multimedia de nuestras soluciones.
+        <div class="flex justify-end">
+        </div>
+      </Feature>
+      <Feature title="Seguridad">
+        Las aplicaciones son descargables e instalables; el cliente controla y aprueba el número de instalaciones de una aplicación en su plataforma.
+        <div class="flex justify-end">
+        </div>
+      </Feature>
+    </div>
+
+    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+      <Counter count="+50" title="Empresas" sub="usando Master Ticket®" />
+      <Counter count="+3500" title="Usuarios Activos" sub="En nuestras plataformas" />
+      <Counter count="52" title="Colegios" sub="Usando Acadsuite®" />
+      <Counter count="+20" title="Años" sub="Prestando nuestros servicios" />
     </div>
   </section>
 </DefaultLayout>

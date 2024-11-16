@@ -1,39 +1,16 @@
 ---
 import Navigation from '../components/Navigation.astro'
 import { SkipLinks } from 'accessible-astro-components'
-import { Icon } from 'astro-icon/components'
 ---
 
 <header>
   <SkipLinks />
   <Navigation>
-    <li class="menu-item">
-      <a href="/">Home</a>
+    <li class="menu-item px-3 back">
+      <a href="/">Inicio</a>
     </li>
-    <li class="menu-item">
-      <a href="/blog/">Blog</a>
-    </li>
-    <li class="menu-item has-dropdown">
-      <button aria-haspopup="true" aria-expanded="false">Example Pages</button>
-      <ul class="dropdown-menu">
-        <li class="submenu-item">
-          <a href="/mdx-page/">MDX Page</a>
-        </li>
-        <li class="submenu-item">
-          <a href="/markdown-page/">Markdown Page</a>
-        </li>
-        <li class="submenu-item">
-          <a href="/accessible-components">Accessible Components</a>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="#" title="external link" rel="external noopener noreferrer">External Link</a>
-    </li>
-    <li class="menu-item type-icon">
-      <a href="https://github.com/markteekman/accessible-astro-starter" title="Go to the GitHub page">
-        <Icon name="ion:logo-github" />
-      </a>
+    <li class="menu-item px-3">
+      <a href="/blog/">Nuestros Productos</a>
     </li>
   </Navigation>
 </header>
@@ -61,5 +38,43 @@ import { Icon } from 'astro-icon/components'
         }
       }
     }
+
+    background-color: rgba(255, 255, 255, 0); // Fondo completamente transparente
+    position: fixed; // Para que el navbar se mantenga en la parte superior
+    top: 0;
+    width: 100%;
+    z-index: 1; // Asegura que el navbar esté encima del contenido de fondo
+    padding: 1rem; // Ajusta el padding si es necesario
+
+    // Agrega una transición suave si quieres un efecto al hacer hover o scroll
+    transition: background-color 0.3s ease;
+  }
+
+  // Estilos para el navbar transparente
+  .navbar {
+    background-color: rgba(255, 255, 255, 0); // Fondo completamente transparente
+    position: fixed; // Para que el navbar se mantenga en la parte superior
+    top: 0;
+    width: 100%;
+    z-index: 1000; // Asegura que el navbar esté encima del contenido de fondo
+    padding: 1rem; // Ajusta el padding si es necesario
+
+    // Agrega una transición suave si quieres un efecto al hacer hover o scroll
+    transition: background-color 0.3s ease;
+
+    // Ejemplo de estilo para el texto y los enlaces del navbar
+    a {
+      color: #ffffff; // Ajusta el color del texto para que sea visible sobre el fondo
+      text-decoration: none;
+
+      &:hover {
+        color: #ddd; // Color más claro al pasar el cursor
+      }
+    }
+  }
+
+  // Opción para hacer que el fondo se vuelva semitransparente al hacer scroll
+  body.scrolled .navbar {
+    background-color: rgba(255, 255, 255, 0.1); // Fondo con un poco de opacidad al hacer scroll
   }
 </style>

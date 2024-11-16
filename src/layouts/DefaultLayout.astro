@@ -6,29 +6,27 @@ import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
 const {
-  title = 'Astro',
-  description = 'A starter project with accessibility features using Astro static site builder. Contains accessible landmarks, skip links, a dark mode color scheme, better focus outline and keyboard menu navigation.',
-  url,
+  title = 'XaraSoft',
+  description = 'Construimos soluciones digitales a la medida de tu empresa',
   image = '/social-preview-image.png',
-  author = 'Mark Teekman',
+  author = 'Jeronimo Mayorca',
 } = Astro.props
 ---
 
-<html lang="en" dir="ltr">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <!-- favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <link rel="icon" href="/public/favicon.ico" type="image/x-icon">
 
     <SiteMeta
       title={title}
       description={description.substring(0, 100)}
       url={Astro.site
         ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
-        : `https://accessible-astro.dev/${title.toLowerCase().replaceAll(' ', '-')}`}
+        : `https://xarasoft.co/${title.toLowerCase().replaceAll(' ', '-')}`}
       image={image}
       author={author}
     />
@@ -49,22 +47,23 @@ const {
         --font-family-default: 'Open Sans', sans-serif;
         --font-family-special: 'Open Sans', sans-serif;
         // light theme
-        --font-color: var(--neutral-900);
-        --action-color: var(--primary-300);
-        --action-color-state: var(--primary-500);
-        --background: var(--neutral-100);
-        --primary-background: var(--primary-100);
-        --neutral-background: var(--neutral-200);
+        --font-color: #3e48cc;
+        --action-color: #60c5c1;
+        --action-color-state: #3c48c9;
+        --background: #f3f4f6;
+        --primary-background: #402955;
+        --neutral-background: #e0e0e0;
+        --error-color: #ff2e58;
       }
 
       // dark color scheme overrides
       .darkmode {
-        --font-color: var(--neutral-100);
-        --action-color: var(--secondary-100);
-        --action-color-state: var(--secondary-500);
+        --font-color: #60c5c1;
+        --action-color: #ff2e58;
+        --action-color-state: #ff2e58;
         --background: var(--dark-100);
-        --primary-background: var(--primary-500);
-        --neutral-background: var(--neutral-900);
+        --primary-background: #402955;
+        --neutral-background: #402955;
       }
 
       // sticky footer on low content pages
